@@ -1,12 +1,9 @@
-Demo = Register()
-print(Demo)
+Demo = Register('Demo')
 
 function Demo:Init()
-	Demo.name = 'Demo'
-	Demo.parent = Main
-	--demo.dependencies = { opengl, sdl }
-
+	self.parent = App
+	self.dependencies = { OpenGL, SDL }
 end
 
-function Demo:Setup(proj)
+function Demo:Setup()
 end
